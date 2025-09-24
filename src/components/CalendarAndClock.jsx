@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react';
 import './CalendarAndClock.scss';
 
-const CalendarAndClock = () => {
+const CalendarAndClock = ({ day, month }) => {
 
-     const day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-    const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+     
     
     const [date, setDate] = useState(new Date());
 
