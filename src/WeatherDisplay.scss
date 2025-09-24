@@ -1,0 +1,35 @@
+.weather-display {
+    width: 70%;
+    height: 70vh;
+    background-color: aquamarine;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+}
+
+.current-temperature {
+    position: relative;
+    top: 60px;
+    left: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.current-temperature p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.degree {
+    position: relative;
+    top: -10px;
+    font-size: 18px;
+    font-weight: normal;
+}
