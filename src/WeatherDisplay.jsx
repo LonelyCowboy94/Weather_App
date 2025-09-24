@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './WeatherDisplay.scss';
+import Location from './Location';
 
 const WeatherDisplay = () => {
 
@@ -7,6 +8,8 @@ const WeatherDisplay = () => {
     const [hour, setHour] = useState(new Date().getHours());
     const [city, setCity] = useState('Novi Sad');
     const [weatherData, setWeatherData] = useState(null);
+
+
 
 
     useEffect(() => {
@@ -33,6 +36,7 @@ const WeatherDisplay = () => {
         <div className={"current-temperature"}>
             <p>{weatherData ? weatherData.current.temp_c.toFixed() : ""}<span className={"degree"}>°C</span></p>
         </div>
+        <Location weatherData={weatherData}/>
     </section>
   )
 }

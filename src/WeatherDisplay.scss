@@ -7,12 +7,10 @@
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
+    flex-wrap: wrap;
 }
 
 .current-temperature {
-    position: relative;
-    top: 60px;
-    left: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,4 +30,10 @@
     top: -10px;
     font-size: 18px;
     font-weight: normal;
+}
+
+@media screen and (min-width: 480px) {
+    .weather-display {
+        justify-content: space-around;
+    }
 }
