@@ -9,7 +9,12 @@
     font-size: 1.2rem;
 }
 
-.place {
+.place, .enter-city {
     font-size: 2rem;
     font-weight: bold;
+}
+
+.enter-city {
+    background-color: transparent;
+    width: 150px;
 }

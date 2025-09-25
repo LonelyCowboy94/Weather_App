@@ -4,11 +4,9 @@ import Location from './components/Location';
 import DailyForecast from './components/DailyForecast';
 
 
-
 const WeatherDisplay = ({ day, month }) => {
 
     const API_KEY = 'dff687ecd56b4f8385c150116252409';
-    const [hour, setHour] = useState(new Date().getHours());
     const [city, setCity] = useState('Novi Sad');
     const [weatherData, setWeatherData] = useState(null);
 
@@ -29,7 +27,7 @@ const WeatherDisplay = ({ day, month }) => {
 
         fetchWeatherData();
         
-    }, []);
+    }, [city]);
 
     
 
@@ -44,9 +42,14 @@ const WeatherDisplay = ({ day, month }) => {
             weatherData={weatherData}
             day={day}
             month={month}
+            setCity={setCity}
             />
         </div>
-        <DailyForecast weatherData={weatherData}/>
+        <DailyForecast 
+        weatherData={weatherData}
+        day={day}
+        />
+       
     </section>
   )
 }
