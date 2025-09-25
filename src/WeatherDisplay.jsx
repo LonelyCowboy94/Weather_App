@@ -13,21 +13,27 @@ const WeatherDisplay = ({ day, month }) => {
     
 
 
-    useEffect(() => {
-        const fetchWeatherData = async () => {
+  useEffect(() => {
+    const fetchWeatherData = async () => {
+        try {
             const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=7&hour=${new Date().getHours()}`;
             const response = await fetch(API_URL);
-            const data = await response.json();
-            
-           
-            setWeatherData(data) 
-            console.log(data);
-            
-        };
 
-        fetchWeatherData();
-        
-    }, [city]);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            setWeatherData(data);
+            console.log(data);
+        } catch (error) {
+            console.error('Failed to fetch weather data:', error);
+            setWeatherData(null); 
+        }
+    };
+
+    fetchWeatherData();
+}, [city]);
 
     
 
