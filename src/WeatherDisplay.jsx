@@ -35,16 +35,20 @@ const WeatherDisplay = ({ day, month }) => {
   return (
     <section className={"weather-display"}>
         <div className="top-section">
-            <div className={"current-temperature"}>
-                <p>{weatherData ? weatherData.current.temp_c.toFixed() : ""}<span className={"degree"}>°C</span></p>
-            </div>
+            
             <Location 
             weatherData={weatherData}
             day={day}
             month={month}
             setCity={setCity}
             />
+
+            <div className={"current-temperature"}>
+                <p>{weatherData ? weatherData.current.temp_c.toFixed() : ""}<span className={"degree"}>°C</span></p>
+            </div>
+
         </div>
+        
         <DailyForecast 
         weatherData={weatherData}
         day={day}

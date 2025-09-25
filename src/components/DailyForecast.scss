@@ -1,5 +1,9 @@
 .daily-forecast-container {
+    width: 100%;
     display: flex;
+    overflow: auto;
     justify-content: space-around;
     margin-top: 20px;
+
 }
+

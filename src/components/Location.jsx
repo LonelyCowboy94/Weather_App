@@ -10,7 +10,7 @@ const Location = ({ weatherData, setCity }) => {
   const [input, setInput] = useState(place);
 
   const handleClick = () => {
-    clicked ? <input type="text" /> : console.log('not clicked');
+    clicked ? <input type="text" /> : null;
     setClicked(!clicked);
   }
 

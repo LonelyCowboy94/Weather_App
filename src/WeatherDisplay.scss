@@ -1,6 +1,6 @@
 .weather-display {
-    width: 70%;
-    height: 70vh;
+    width: 90%;
+    height: 85vh;
     background-color: aquamarine;
     margin: 5% auto;
     padding: 20px;
@@ -13,14 +13,19 @@
 
 .top-section {
     display: flex;
-    margin: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    gap: 30px;
+    padding: 20px;
 }
 
 .current-temperature {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 70px;
+    width: 70px;
     height: 70px;
     background-color: white;
     border-radius: 10px;
@@ -39,7 +44,14 @@
 }
 
 @media screen and (min-width: 480px) {
-    .top-section {
-        justify-content: space-around;
+   
+    .weather-display {
+        width: 70%;
+        height: 70vh;
     }
+}
+
+@media screen and (max-width: 480px) {
+   
+    
 }
