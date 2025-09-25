@@ -6,7 +6,7 @@ import DailyForecast from './components/DailyForecast';
 
 const WeatherDisplay = ({ day, month }) => {
 
-    const API_KEY = 'dff687ecd56b4f8385c150116252409';
+    const API_KEY = 'ea9257a20a744a32a7d221850252509';
     const [city, setCity] = useState('Novi Sad');
     const [weatherData, setWeatherData] = useState(null);
 
