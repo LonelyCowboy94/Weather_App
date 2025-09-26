@@ -31,6 +31,13 @@ runAtMidnight(() => {
 
   return (
     <div className="hourly-forecast">
+
+                  <div className="hourly-forecast-card">
+                    <p>Now</p>
+                    <img src={weatherData ? weatherData.current.condition.icon : ""} alt={weatherData ? weatherData.current.condition.text : ""} />
+                    <p>{weatherData ? weatherData.current.temp_c.toFixed() : ""}<span>°</span></p>
+                  </div>
+
         {hours.map((hour, index) => {
 
             
@@ -46,12 +53,13 @@ runAtMidnight(() => {
             return (
             hourNumber > now ?
             
-                <div 
+                <div
+                className="hourly-forecast-card" 
                 key={index}
                 >
                     <p>{displayHour} <span>{ampm}</span></p>
                     <img src={hour.condition.icon} alt="" />
-                    <p key={index}>{hour.temp_c}<span>°C</span></p>
+                    <p key={index}>{hour.temp_c.toFixed()}<span>°</span></p>
                 </div>
             
              : ""

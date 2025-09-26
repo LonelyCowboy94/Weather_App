@@ -2,16 +2,30 @@
 
 .hourly-forecast {
     @include mix.background;
+    @include mix.scrollBar;
     display: flex;
     flex-grow: 1 1;
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
     gap: 10px;
-    scrollbar-width: thin;        
-    scrollbar-color: blue transparent;
-    scroll-behavior: smooth;
+    
     min-height: 120px;
+}
+
+.hourly-forecast img {
+    width: 45px;
+}
+
+.hourly-forecast-card {
+    text-align: center;
+    margin: 10px;
+}
+
+.hourly-forecast-card p:last-child {
+    margin-top: -5px;
+    font-size: 1.3rem;
+    text-shadow: 2px 2px 4px rgb(4, 46, 4);
 }
 
         

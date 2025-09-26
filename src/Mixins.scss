@@ -2,10 +2,18 @@
   background: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   backdrop-filter: blur(3px);
-  padding: 15px;
+  padding: 10px;
 }
+
+
 
 @mixin text {
   color: white;
   text-shadow: 2px 2px 3px rgb(30, 34, 44);
+}
+
+@mixin scrollBar {
+  scrollbar-width: thin;        
+  scrollbar-color: blue transparent;
+  scroll-behavior: smooth;
 }
