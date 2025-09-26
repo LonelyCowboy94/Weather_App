@@ -5,5 +5,14 @@
     height: fit-content;
     min-width: 300px;
     flex-grow: 2;
+    margin: 0 -30px;
 }
 
+.weather-details p {
+    display: flex;
+   
+}
+
+.weather-details p span {
+    margin-left: auto;
+}

@@ -61,8 +61,10 @@ const WeatherDisplay = ({ day, month }) => {
             month={month}
             setCity={setCity}
             />
-
-            <DailyInfo />
+            
+            <DailyInfo 
+            weatherData={weatherData}
+            />
             
         </div>
 

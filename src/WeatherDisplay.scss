@@ -13,6 +13,10 @@
     overflow: auto;
 }
 
+.region {
+    margin: 10px 20px 0 auto;
+}
+
 .weather-display p {
     @include mix.text;
 }

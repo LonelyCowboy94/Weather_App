@@ -20,12 +20,13 @@
 }
 
 .current-temperature {
-    margin: 20px;
+    margin-top: 20px;
 }
 
 .current-temperature p {
-    font-size: 48px;
+    font-size: 60px;
     font-weight: bold;
+    transform: translateX(10px);
 }
 
 .degree {

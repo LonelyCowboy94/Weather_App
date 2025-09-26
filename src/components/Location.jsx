@@ -45,11 +45,15 @@ const Location = ({ weatherData, setCity }) => {
         </form>
         }
 
+        <p className="country">{weatherData ? weatherData.location.country : ""}</p>
+
         <div className={"current-temperature"}>
                 <p>{weatherData ? weatherData.current.temp_c.toFixed() : ""}<span className={"degree"}>°C</span></p>
         </div>
 
-        <p className="country">{weatherData ? weatherData.location.country : ""}</p>
+        <p>{weatherData ? weatherData.current.condition.text : ""}</p>
+
+        
     </div>
   )
 }

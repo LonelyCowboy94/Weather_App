@@ -40,20 +40,20 @@ runAtMidnight(() => {
             const displayHour = hourNumber % 12 === 0 ? 12 : hourNumber % 12;
             const now = new Date().getHours();
 
-            console.log(hours)
+            
            
            
             return (
             hourNumber > now ?
-            <>
+            
                 <div 
                 key={index}
                 >
                     <p>{displayHour} <span>{ampm}</span></p>
                     <img src={hour.condition.icon} alt="" />
-                    <p>{hour.temp_c}<span>°C</span></p>
+                    <p key={index}>{hour.temp_c}<span>°C</span></p>
                 </div>
-            </>
+            
              : ""
             )
             
