@@ -4,6 +4,7 @@ const DailyInfo = ({ weatherData }) => {
 
    
   return (
+   
     <section className="daily-info">
 
         
@@ -16,6 +17,8 @@ const DailyInfo = ({ weatherData }) => {
         </div>
 
     </section>
+    
+   
   )
 }
 

@@ -1,20 +1,19 @@
 @use './Mixins.scss' as mix;
 
 .weather-display {
-    width: 90%;
-    height: 85vh;
-    background-color: aquamarine;
-    margin: 5% auto;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 850px;
+    height: 100vh;
+    background-color: transparent;
+    margin: auto;
+    padding: 20px 5%;
     display: flex;
     flex-direction: column;
-    overflow: auto;
+    overflow: none;
 }
 
 .region {
-    margin: 10px 20px 0 auto;
+    margin: 0 20px 0 auto;
 }
 
 .weather-display p {
@@ -26,27 +25,10 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    margin: 10px;
     gap: 30px;
-    padding: 20px;
+    padding: 10px 30px;
     flex-grow: 1 1;
 }
 
-@media screen and (min-width: 480px) {
-   
-    .weather-display {
-        width: 70%;
-        height: 70vh;
-    }
-}
 
-@media screen and (max-width: 480px) {
-    .top-section {
-        margin-top: 0px;
-    }
 
-    .weather-display {
-        padding-top: 0px;
-    }
-    
-}

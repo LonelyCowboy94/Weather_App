@@ -8,7 +8,6 @@ const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'O
 
   return (
     <>
-      <Header />
       <WeatherDisplay 
       day={day}
       month={month}
