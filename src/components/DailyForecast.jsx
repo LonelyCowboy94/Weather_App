@@ -14,15 +14,25 @@ const DailyForecast = ({ weatherData, day }) => {
 
             <div key={index} className="daily-forecast">
 
-              <p className="days-of-week">
-                {day[d.date ? new Date(d.date).getDay() : 0]}
-              </p>
+              <div>
+                <p className="days-of-week">
+                  {day[d.date ? new Date(d.date).getDay() : 0]}
+                </p>
+
+                {weatherData?.current?.condition?.icon && (
+                  <img 
+                    src={d.day.condition.icon} 
+                    alt={d.day.condition.text || "Weather icon"} 
+                  />
+                )}
+              </div>
               
               <p className="daily-temperature-average">
                 {d.day.avgtemp_c}<span>°C</span>
               </p>
 
-              <img src={d.day.condition.icon} alt={d.day.condition.text} />
+              
+
               </div>))}
     </section>
         ) 
