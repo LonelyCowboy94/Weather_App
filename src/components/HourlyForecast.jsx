@@ -3,7 +3,7 @@ import './HourlyForecast.scss'
 const HourlyForecast = ({ weatherData }) => {
 
     const hours = weatherData ? weatherData.forecast.forecastday[0].hour : [];
-    const hoursNextDay = weatherData ? weatherData.forecast.forecastday[1].hour : [];
+    // const hoursNextDay = weatherData ? weatherData.forecast.forecastday[1].hour : [];
 
     function runAtMidnight(callback) {
   const now = new Date();
@@ -40,7 +40,7 @@ runAtMidnight(() => {
             const displayHour = hourNumber % 12 === 0 ? 12 : hourNumber % 12;
             const now = new Date().getHours();
 
-            console.log(now, hourNumber)
+            console.log(hours)
            
            
             return (
@@ -51,7 +51,7 @@ runAtMidnight(() => {
                 >
                     <p>{displayHour} <span>{ampm}</span></p>
                     <img src={hour.condition.icon} alt="" />
-                    <p>{hour.chance_of_rain}%</p>
+                    <p>{hour.temp_c}<span>°C</span></p>
                 </div>
             </>
              : ""

@@ -4,8 +4,11 @@
     @include mix.background;
     width: 100%;
     display: flex;
+    flex-grow: 1 1;
     overflow: auto;
     justify-content: space-around;
     margin-top: 20px;
+    overflow-y: hidden;
+    min-height: 130px;
 }
 

@@ -3,8 +3,15 @@
 .hourly-forecast {
     @include mix.background;
     display: flex;
+    flex-grow: 1 1;
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
+    overflow-y: hidden;
     gap: 10px;
-    
+    scrollbar-width: thin;        
+    scrollbar-color: blue transparent;
+    scroll-behavior: smooth;
+    min-height: 120px;
 }
+
+        

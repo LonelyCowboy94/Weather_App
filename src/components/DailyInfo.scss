@@ -1,0 +1,9 @@
+@use '../Mixins.scss' as mix;
+
+.daily-info {
+    @include mix.background;
+    height: fit-content;
+    min-width: 300px;
+    flex-grow: 2;
+}
+

@@ -4,3 +4,8 @@
   backdrop-filter: blur(3px);
   padding: 15px;
 }
+
+@mixin text {
+  color: white;
+  text-shadow: 2px 2px 3px rgb(30, 34, 44);
+}

@@ -10,7 +10,11 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.weather-display p {
+    @include mix.text;
 }
 
 .top-section {
@@ -21,28 +25,7 @@
     margin: 10px;
     gap: 30px;
     padding: 20px;
-}
-
-.current-temperature {
-    @include mix.background;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 70px;
-    height: 70px;
-    
-}
-
-.current-temperature p {
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.degree {
-    position: relative;
-    top: -10px;
-    font-size: 18px;
-    font-weight: normal;
+    flex-grow: 1 1;
 }
 
 @media screen and (min-width: 480px) {

@@ -3,6 +3,7 @@ import './WeatherDisplay.scss';
 import Location from './components/Location';
 import DailyForecast from './components/DailyForecast';
 import HourlyForecast from './components/HourlyForecast';
+import DailyInfo from './components/DailyInfo';
 
 
 const WeatherDisplay = ({ day, month }) => {
@@ -49,6 +50,9 @@ const WeatherDisplay = ({ day, month }) => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover"
     }} className={"weather-display"}>
+
+        <p className="region">{weatherData ? weatherData.location.region : ""}</p>
+
         <div className="top-section">
             
             <Location 
@@ -58,11 +62,15 @@ const WeatherDisplay = ({ day, month }) => {
             setCity={setCity}
             />
 
-            <div className={"current-temperature"}>
-                <p>{weatherData ? weatherData.current.temp_c.toFixed() : ""}<span className={"degree"}>°C</span></p>
-            </div>
-
+            <DailyInfo />
+            
         </div>
+
+        <div className='bottom-section'>
+        
+
+        
+        
 
         <HourlyForecast 
         weatherData={weatherData}
@@ -72,6 +80,7 @@ const WeatherDisplay = ({ day, month }) => {
         weatherData={weatherData}
         day={day}
         />
+        </div>
        
     </section>
   )

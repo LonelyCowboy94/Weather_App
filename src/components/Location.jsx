@@ -20,7 +20,7 @@ const Location = ({ weatherData, setCity }) => {
     onClick={handleClick}
     >
 
-        <p className="region">{weatherData ? weatherData.location.region : ""}</p>
+        
 
         {!clicked ? 
         <p 
@@ -44,6 +44,10 @@ const Location = ({ weatherData, setCity }) => {
         onFocus={(e) => e.target.select()} />
         </form>
         }
+
+        <div className={"current-temperature"}>
+                <p>{weatherData ? weatherData.current.temp_c.toFixed() : ""}<span className={"degree"}>°C</span></p>
+        </div>
 
         <p className="country">{weatherData ? weatherData.location.country : ""}</p>
     </div>

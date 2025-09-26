@@ -1,15 +1,38 @@
 @use '../Mixins.scss' as mix;
 
 .location-info {
-    @include mix.background;
     height: fit-content;
     width: fit-content;
     padding: 20px;
-    
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.location-info p {
+    color: white;
+    text-shadow: 2px 2px 3px rgb(30, 34, 44);
 }
 
 .country {
     font-size: 1.2rem;
+}
+
+.current-temperature {
+    margin: 20px;
+}
+
+.current-temperature p {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.degree {
+    position: relative;
+    top: -25px;
+    font-size: 18px;
+    font-weight: normal;
 }
 
 .place, .enter-city {
