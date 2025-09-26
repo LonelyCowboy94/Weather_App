@@ -1,9 +1,11 @@
+@use '../Mixins.scss' as mix;
+
 .location-info {
-    background-color: aliceblue;
+    @include mix.background;
     height: fit-content;
     width: fit-content;
     padding: 20px;
-    border-radius: 10px;
+    
 }
 
 .country {

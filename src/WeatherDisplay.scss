@@ -1,3 +1,5 @@
+@use './Mixins.scss' as mix;
+
 .weather-display {
     width: 90%;
     height: 85vh;
@@ -22,13 +24,13 @@
 }
 
 .current-temperature {
+    @include mix.background;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 70px;
     height: 70px;
-    background-color: white;
-    border-radius: 10px;
+    
 }
 
 .current-temperature p {

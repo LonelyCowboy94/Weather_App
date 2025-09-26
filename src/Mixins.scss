@@ -1,0 +1,6 @@
+@mixin background {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+  padding: 15px;
+}

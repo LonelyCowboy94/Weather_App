@@ -34,8 +34,8 @@ runAtMidnight(() => {
         {hours.map((hour, index) => {
 
             
-            const hourString = hour.time.split(" ")[1].split(":")[0]; // npr. "04"
-            const hourNumber = parseInt(hourString, 10); // 4 kao broj
+            const hourString = hour.time.split(" ")[1].split(":")[0]; 
+            const hourNumber = parseInt(hourString, 10); 
             const ampm = hourNumber >= 12 ? "PM" : "AM";
             const displayHour = hourNumber % 12 === 0 ? 12 : hourNumber % 12;
             const now = new Date().getHours();
