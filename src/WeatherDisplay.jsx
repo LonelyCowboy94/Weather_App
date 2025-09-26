@@ -16,9 +16,12 @@ const WeatherDisplay = ({ day, month }) => {
 
   useEffect(() => {
 
+
     const fetchWeatherData = async () => {
         try {
             const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=7`;
+
+
             const response = await fetch(API_URL);
 
             if (!response.ok) {
