@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './WeatherDisplay.scss';
 import Location from './components/Location';
 import DailyForecast from './components/DailyForecast';
+import HourlyForecast from './components/HourlyForecast';
 
 
 const WeatherDisplay = ({ day, month }) => {
@@ -11,12 +12,13 @@ const WeatherDisplay = ({ day, month }) => {
     const [weatherData, setWeatherData] = useState(null);
 
     
-
+    
 
   useEffect(() => {
+
     const fetchWeatherData = async () => {
         try {
-            const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=7&hour=${new Date().getHours()}`;
+            const API_URL = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city}&days=7`;
             const response = await fetch(API_URL);
 
             if (!response.ok) {
@@ -28,7 +30,6 @@ const WeatherDisplay = ({ day, month }) => {
             console.log(data);
         } catch (error) {
             console.error('Failed to fetch weather data:', error);
-            // Možeš ovde postaviti fallback state ili prikazati poruku korisniku
             setWeatherData(null); 
         }
     };
@@ -55,6 +56,10 @@ const WeatherDisplay = ({ day, month }) => {
             </div>
 
         </div>
+
+        <HourlyForecast 
+        weatherData={weatherData}
+        />
         
         <DailyForecast 
         weatherData={weatherData}
