@@ -12,7 +12,7 @@ const DailyInfo = ({ weatherData }) => {
             <p>Feels like <span>{weatherData ? weatherData.current.feelslike_c.toFixed() : ""} °C</span></p>
             <p>Humidity <span>{weatherData ? weatherData.current.humidity : ""}</span></p>
             <p>Atmospheric pressure <span>{weatherData ? weatherData.current.pressure_mb : ''} mb</span></p>
-            <p>Wind <span>{weatherData ? weatherData.current.wind_kph : ''}</span> kph</p>
+            <p>Wind <span>{weatherData ? weatherData.current.wind_kph : ""}</span> kph</p>
         </div>
 
     </section>

@@ -5,12 +5,20 @@
     height: fit-content;
     min-width: 300px;
     flex-grow: 2;
+    
+    gap: 10px;
     margin: 0 -30px;
+    padding: 20px;
+}
+
+.weather-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .weather-details p {
     display: flex;
-   
 }
 
 .weather-details p span {
