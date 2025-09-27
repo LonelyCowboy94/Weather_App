@@ -13,7 +13,7 @@ const WeatherDisplay = ({ day, month }) => {
     const [weatherData, setWeatherData] = useState(null);
 
     
-    
+  
 
   useEffect(() => {
 
