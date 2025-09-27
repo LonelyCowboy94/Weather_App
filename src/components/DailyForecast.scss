@@ -5,12 +5,13 @@
     @include mix.scrollBar;
     width: 100%;
     display: flex;
+    gap: 10px;
     flex-direction: column;
     flex-grow: 1 1;
     overflow: auto;
     justify-content: space-around;
     margin-top: 20px;
-    padding: 0 5%;
+    padding: 15px 5%;
     overflow-y: hidden;
     min-height: 130px;
 }
@@ -23,7 +24,10 @@
 
 .daily-forecast div {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
 }
 
+.daily-forecast img {
+    width: 45px;
+}

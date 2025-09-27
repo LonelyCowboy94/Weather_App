@@ -1,12 +1,10 @@
 @use './Mixins.scss' as mix;
 
 .weather-display {
-    width: 100%;
-    max-width: 850px;
-    height: 100vh;
-    background-color: transparent;
     margin: auto;
-    padding: 20px 5%;
+    max-width: 850px;
+    background-color: transparent;
+    padding: 40px 5%;
     display: flex;
     flex-direction: column;
     overflow: none;
