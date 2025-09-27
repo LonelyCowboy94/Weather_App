@@ -1,0 +1,44 @@
+@use '../Mixins.scss' as mix;
+
+.input {
+    display: flex;
+}
+
+.searchCity {
+    @include mix.background;
+    display: flex;
+    border: 3px solid rgba(16, 39, 65, 0.192);
+    border-radius: 25px;
+    font-size: 28px;
+    color: #FFF;
+    padding: 5px 10px;
+    flex-grow: 1;
+    width: 90%;
+    min-width: 220px;
+    margin: auto;
+    text-align: center;
+}
+
+.searchCity:focus {
+    outline: none;
+}
+
+.suggestions {
+    @include mix.background;
+    margin-top: 10px;
+    list-style: none;
+    color: #FFF;
+    position: absolute;
+    
+    z-index: 1;
+}
+
+.suggestions li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.highlighted {
+  background-color: #282a3b91;
+  border-radius: 10px;
+}

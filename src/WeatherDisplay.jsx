@@ -31,7 +31,7 @@ const WeatherDisplay = ({ day, month }) => {
 
             const data = await response.json();
             setWeatherData(data);
-            console.log(data);
+            // console.log(data);
         } catch (error) {
             console.error('Failed to fetch weather data:', error);
             setWeatherData(null); 
@@ -50,8 +50,9 @@ const WeatherDisplay = ({ day, month }) => {
         <p className="region">{weatherData ? weatherData.location.region : ""}</p>
 
         <div className="top-section">
-            
+
             <Location 
+            API_KEY={API_KEY}
             weatherData={weatherData}
             day={day}
             month={month}
