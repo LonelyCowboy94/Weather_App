@@ -3,11 +3,12 @@
 .location-info {
     height: fit-content;
     width: 40%;
-    padding: 20px;
-    flex-grow: 1;
+    padding: 20px 20px 20px 0;
+   
     display: flex;
     flex-direction: column;
     align-items: center;
+   
 }
 
 .location-info p {
@@ -17,10 +18,12 @@
 
 .country {
     font-size: 1.2rem;
+    padding-top: 10px;
 }
 
 .current-temperature {
-    margin-top: 20px;
+    margin-top: 5px;
+    margin-bottom: -5px;
 }
 
 .current-temperature p {
@@ -49,4 +52,10 @@
     color: white;
     outline: none;
     border: none;
+}
+
+@media screen and (max-width: 748px) {
+    .location-info {
+        width: 80%;
+    }
 }

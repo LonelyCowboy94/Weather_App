@@ -2,18 +2,19 @@
 
 .input {
     display: flex;
+    justify-content: center;
 }
 
 .searchCity {
     @include mix.background;
+    @include mix.text;
     display: flex;
     border: 3px solid rgba(16, 39, 65, 0.192);
-    border-radius: 25px;
+    border-radius: 10px;
     font-size: 28px;
-    color: #FFF;
     padding: 5px 10px;
-    flex-grow: 1;
-    width: 90%;
+    
+    width: 100%;
     min-width: 220px;
     margin: auto;
     text-align: center;
@@ -21,6 +22,7 @@
 
 .searchCity:focus {
     outline: none;
+    
 }
 
 .suggestions {
@@ -29,8 +31,9 @@
     list-style: none;
     color: #FFF;
     position: absolute;
-    
     z-index: 1;
+    flex-grow: 1;
+    max-width: 350px;
 }
 
 .suggestions li {
@@ -42,3 +45,31 @@
   background-color: #282a3b91;
   border-radius: 10px;
 }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media screen and (max-width: 480px) {
+    .suggestions {
+      width: 300px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 748px) {
+  .searchCity {
+    
+    
+  }
+}
+
