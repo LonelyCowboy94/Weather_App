@@ -1,46 +1,41 @@
-@use './Mixins.scss' as mix;
+@use "./Mixins.scss" as mix;
 
 .weather-display {
-    margin: auto;
-    max-width: 850px;
-    background-color: transparent;
-    padding: 20px 5% 40px 5%;
-    display: flex;
-    flex-direction: column;
-    overflow: none;
+  margin: auto;
+  max-width: 850px;
+  background-color: transparent;
+  padding: 20px 5% 40px 5%;
+  display: flex;
+  flex-direction: column;
+  overflow: none;
 }
 
 .region {
-    margin: 0 20px 0 auto;
+  margin: 0 20px 0 auto;
 }
 
 .weather-display p {
-    @include mix.text;
+  @include mix.text;
 }
 
 .top-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    
-    
-    padding: 10px 0;
-    flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 0;
+  flex-grow: 1;
 }
 
 @media screen and (max-width: 748px) {
-    .top-section {
-        
-        padding-top: 0;
-       
-    }
-    .region {
-        display: none;
-    }
-    .weather-display {
-        padding-top: 0;
-    }
+  .top-section {
+    padding-top: 0;
+  }
+  .region {
+    display: none;
+  }
+  .weather-display {
+    padding-top: 0;
+  }
 }
-
-

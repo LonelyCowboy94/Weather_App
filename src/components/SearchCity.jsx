@@ -28,7 +28,6 @@ const SearchCity = ({ API_KEY, setCity }) => {
     } else {
       setSuggestions([]);
     }
-   
   }, [inputValue, isSelecting]);
 
   const handleKeyDown = (e) => {

@@ -1,63 +1,63 @@
-@use '../Mixins.scss' as mix;
+@use "../Mixins.scss" as mix;
 
 .location-info {
-    height: fit-content;
-    width: 40%;
-    padding: 20px 20px 20px 0;
-   
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  height: fit-content;
+  width: 40%;
+  padding: 20px 20px 20px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .location-info p {
-    color: white;
-    text-shadow: 2px 2px 3px rgb(30, 34, 44);
+  color: white;
+  text-shadow: 2px 2px 3px rgb(30, 34, 44);
 }
 
 .country {
-    font-size: 1.2rem;
-    padding-top: 10px;
+  font-size: 1.2rem;
+  padding-top: 10px;
 }
 
 .current-temperature {
-    margin-top: 5px;
-    margin-bottom: -5px;
+  margin-top: 5px;
+  margin-bottom: -5px;
 }
 
 .current-temperature p {
-    font-size: 60px;
-    font-weight: bold;
-    transform: translateX(10px);
+  font-size: 60px;
+  font-weight: bold;
+  transform: translateX(10px);
 }
 
 .degree {
-    position: relative;
-    top: -25px;
-    font-size: 18px;
-    font-weight: normal;
+  position: relative;
+  top: -25px;
+  font-size: 18px;
+  font-weight: normal;
 }
 
-.place, .enter-city {
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    
+.place,
+.enter-city {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 .enter-city {
-    background-color: transparent;
-    width: 150px;
-    color: white;
-    outline: none;
-    border: none;
+  background-color: transparent;
+  width: 150px;
+  color: white;
+  outline: none;
+  border: none;
 }
 
 @media screen and (max-width: 748px) {
-    .location-info {
-        width: 80%;
-        padding: 10px 0;
-        margin-bottom: 20px;
-    }
+  .location-info {
+    width: 80%;
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
 }

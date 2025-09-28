@@ -1,4 +1,4 @@
-@use '../Mixins.scss' as mix;
+@use "../Mixins.scss" as mix;
 
 .input {
   width: 100%;
@@ -24,7 +24,12 @@
 
 .searchCity:focus {
   outline: none;
-  background: linear-gradient(10deg, rgba(16, 39, 65, 0.589), rgba(16, 39, 65, 0.733), rgba(16, 39, 65, 0.692));
+  background: linear-gradient(
+    10deg,
+    rgba(16, 39, 65, 0.589),
+    rgba(16, 39, 65, 0.733),
+    rgba(16, 39, 65, 0.692)
+  );
   border: 3px solid rgba(20, 41, 65, 0.226);
 }
 
@@ -32,12 +37,12 @@
   @include mix.background;
   margin-top: 10px;
   list-style: none;
-  color: #FFF;
+  color: #fff;
   position: absolute;
   z-index: 1;
   width: 90%;
   max-width: 650px;
-  
+
   background: linear-gradient(90deg, rgba(16, 39, 65, 0.753), rgb(39, 64, 92));
 }
 
@@ -47,7 +52,13 @@
 }
 
 .highlighted {
-  background: linear-gradient(175deg, transparent, transparent, #484c742c 30%, #696b9663);
+  background: linear-gradient(
+    175deg,
+    transparent,
+    transparent,
+    #484c742c 30%,
+    #696b9663
+  );
   border-radius: 10px;
 }
 
@@ -64,7 +75,8 @@
 }
 
 @media screen and (max-width: 748px) {
-  .searchCity, .suggestions {
+  .searchCity,
+  .suggestions {
     width: 90%;
     max-width: 100%;
   }
