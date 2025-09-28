@@ -1,39 +1,44 @@
 @use '../Mixins.scss' as mix;
 
 .input {
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .searchCity {
-    @include mix.background;
-    @include mix.text;
-    display: flex;
-    border: 3px solid rgba(16, 39, 65, 0.192);
-    border-radius: 10px;
-    font-size: 28px;
-    padding: 5px 10px;
-    
-    width: 100%;
-    min-width: 220px;
-    margin: auto;
-    text-align: center;
+  @include mix.background;
+  @include mix.text;
+  display: block;
+  border: 3px solid rgba(16, 39, 65, 0.192);
+  border-radius: 10px;
+  font-size: 28px;
+  padding: 5px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 650px;
+  min-width: 220px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .searchCity:focus {
-    outline: none;
-    
+  outline: none;
+  background: linear-gradient(10deg, rgba(16, 39, 65, 0.589), rgba(16, 39, 65, 0.733), rgba(16, 39, 65, 0.692));
+  border: 3px solid rgba(20, 41, 65, 0.226);
 }
 
 .suggestions {
-    @include mix.background;
-    margin-top: 10px;
-    list-style: none;
-    color: #FFF;
-    position: absolute;
-    z-index: 1;
-    flex-grow: 1;
-    max-width: 350px;
+  @include mix.background;
+  margin-top: 10px;
+  list-style: none;
+  color: #FFF;
+  position: absolute;
+  z-index: 1;
+  width: 90%;
+  max-width: 650px;
+  
+  background: linear-gradient(90deg, rgba(16, 39, 65, 0.753), rgb(39, 64, 92));
 }
 
 .suggestions li {
@@ -42,7 +47,7 @@
 }
 
 .highlighted {
-  background-color: #282a3b91;
+  background: linear-gradient(175deg, transparent, transparent, #484c742c 30%, #696b9663);
   border-radius: 10px;
 }
 
@@ -58,18 +63,16 @@
   border: 0;
 }
 
-@media screen and (max-width: 480px) {
-    .suggestions {
-      width: 300px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-}
-
 @media screen and (max-width: 748px) {
-  .searchCity {
-    
-    
+  .searchCity, .suggestions {
+    width: 90%;
+    max-width: 100%;
+  }
+  .suggestions {
+    @include mix.scrollBar;
+    left: 50%;
+    transform: translateX(-50%);
+    max-height: 135px;
+    overflow-y: scroll;
   }
 }
-
