@@ -4,13 +4,12 @@ import Location from "./components/Location";
 import DailyForecast from "./components/DailyForecast";
 import HourlyForecast from "./components/HourlyForecast";
 import DailyInfo from "./components/DailyInfo";
+import Wind from "./components/Wind";
 
 const WeatherDisplay = ({ day, month }) => {
   const API_KEY = "ea9257a20a744a32a7d221850252509";
   const [city, setCity] = useState("Novi Sad");
   const [weatherData, setWeatherData] = useState(null);
-
-  console.log(weatherData)
 
   useEffect(() => {
     const fetchWeatherData = async () => {
@@ -50,6 +49,10 @@ const WeatherDisplay = ({ day, month }) => {
 
         <DailyInfo weatherData={weatherData} />
       </div>
+
+    <Wind 
+    weatherData={weatherData}
+    />
 
       <div className="bottom-section">
         <HourlyForecast weatherData={weatherData} />

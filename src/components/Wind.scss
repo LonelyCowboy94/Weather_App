@@ -1,0 +1,19 @@
+@use '../Mixins.scss' as mix;
+
+.compas {
+    @include mix.background;
+    width: 150px;
+    margin-bottom: 20px;
+}
+.compas svg circle, .compas svg g {
+    stroke: #FFF;
+}
+.nedle {
+    position: absolute;
+    top: 20px;
+}
+
+.compas svg polygon {
+    transition: transform 0.7s linear;
+    transform-origin: 50% 50%;
+}
