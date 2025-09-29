@@ -34,10 +34,12 @@ const Wind = ({ weatherData }) => {
           <p>S</p>
           <p>W</p>
           <svg
-            className="circle"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 200 200"
-          >
+  className="compas"
+  viewBox="0 0 200 200"
+  width="200"
+  height="200"
+  preserveAspectRatio="xMidYMid meet"
+>
             <defs>
               <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
                 <feDropShadow
@@ -72,10 +74,10 @@ const Wind = ({ weatherData }) => {
             </text>
 
             <polygon
-              ref={windDirection}
-              points="100,35 110,70 100,60 90,70"
-              fill="red"
-            />
+  points="100,35 110,70 100,60 90,70"
+  fill="red"
+  style={{ transform: `rotate(${angle + 180}deg)`, transformOrigin: "100px 100px", transition: "transform 0.7s linear" }}
+/>
 
             <g stroke="black" filter="url(#shadow)">
               {Array.from({ length: 72 }).map((_, i) => {

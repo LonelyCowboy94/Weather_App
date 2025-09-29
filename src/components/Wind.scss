@@ -23,7 +23,7 @@
 }
 
 .info-list p span {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .wind-info {
@@ -33,22 +33,19 @@
   margin-right: 15px;
 }
 
+.compas svg {
+  position: relative;
+  top: -59.5px;
+}
+
 .compas {
+    margin-top: 7px;
   display: flex;
   width: 127px;
 }
 .compas svg circle,
 .compas svg g {
   stroke: #fff;
-}
-.nedle {
-  position: absolute;
-  top: 20px;
-}
-
-.compas svg polygon {
-  transition: transform 0.7s linear;
-  transform-origin: 50% 50%;
 }
 
 .compas p:nth-child(1) {
@@ -76,7 +73,7 @@
 }
 
 @media screen and (max-width: 748px) {
-    .wind {
-        min-width: 100%;
-    }
+  .wind {
+    min-width: 100%;
+  }
 }
