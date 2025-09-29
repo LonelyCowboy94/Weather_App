@@ -1,19 +1,82 @@
-@use '../Mixins.scss' as mix;
+@use "../Mixins.scss" as mix;
+
+.wind {
+  @include mix.background;
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 65%;
+  margin-left: auto;
+}
+
+.info-list {
+  width: 80%;
+}
+
+.info-list p {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.info-list p span {
+    font-size: 18px;
+}
+
+.wind-info {
+  display: flex;
+  width: 127px;
+  height: 97px;
+  margin-right: 15px;
+}
 
 .compas {
-    @include mix.background;
-    width: 150px;
-    margin-bottom: 20px;
+  display: flex;
+  width: 127px;
 }
-.compas svg circle, .compas svg g {
-    stroke: #FFF;
+.compas svg circle,
+.compas svg g {
+  stroke: #fff;
 }
 .nedle {
-    position: absolute;
-    top: 20px;
+  position: absolute;
+  top: 20px;
 }
 
 .compas svg polygon {
-    transition: transform 0.7s linear;
-    transform-origin: 50% 50%;
+  transition: transform 0.7s linear;
+  transform-origin: 50% 50%;
+}
+
+.compas p:nth-child(1) {
+  position: relative;
+  top: -7px;
+  left: 81px;
+}
+
+.compas p:nth-child(2) {
+  position: relative;
+  top: 39px;
+  left: 114px;
+}
+
+.compas p:nth-child(3) {
+  position: relative;
+  top: 83.5px;
+  left: 60px;
+}
+
+.compas p:nth-child(4) {
+  position: relative;
+  top: 39px;
+  left: 1px;
+}
+
+@media screen and (max-width: 748px) {
+    .wind {
+        min-width: 100%;
+    }
 }

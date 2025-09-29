@@ -58,10 +58,11 @@ const HourlyForecast = ({ weatherData }) => {
             />
           )}
 
-          <p key={index}>
+          <p className="temperature-in-hour" key={index}>
             {hour.temp_c.toFixed()}
             <span>°</span>
           </p>
+          <p className="hourly-chance-of-rain">{hour.chance_of_rain !== 0 ? hour.chance_of_rain + "%" : ""}</p>
         </div>
       );
     });
@@ -74,7 +75,7 @@ const HourlyForecast = ({ weatherData }) => {
         {weatherData?.current?.condition?.icon && (
           <img src={weatherData.current.condition.icon} alt="Weather icon" />
         )}
-        <p>
+        <p className="temperature-in-hour">
           {weatherData ? weatherData.current.temp_c.toFixed() : ""}
           <span>°</span>
         </p>

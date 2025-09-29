@@ -3,7 +3,6 @@ import "./WeatherDisplay.scss";
 import Location from "./components/Location";
 import DailyForecast from "./components/DailyForecast";
 import HourlyForecast from "./components/HourlyForecast";
-import DailyInfo from "./components/DailyInfo";
 import Wind from "./components/Wind";
 
 const WeatherDisplay = ({ day, month }) => {
@@ -47,12 +46,12 @@ const WeatherDisplay = ({ day, month }) => {
           setCity={setCity}
         />
 
-        <DailyInfo weatherData={weatherData} />
-      </div>
-
-    <Wind 
+        <Wind 
     weatherData={weatherData}
     />
+      </div>
+
+    
 
       <div className="bottom-section">
         <HourlyForecast weatherData={weatherData} />

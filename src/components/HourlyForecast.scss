@@ -2,16 +2,13 @@
 
 .hourly-forecast {
   @include mix.background;
+  padding: 0;
   @include mix.scrollBar;
   display: flex;
-
   flex-grow: 1 1;
   width: 100%;
   overflow-x: auto;
   overflow-y: hidden;
-  gap: 10px;
-
-  min-height: 120px;
 }
 
 .hourly-forecast img {
@@ -23,11 +20,15 @@
   margin: 10px;
 }
 
-.hourly-forecast-card p:last-child {
+.temperature-in-hour {
   margin-top: -5px;
   font-size: 1.3rem;
   text-shadow: 2px 2px 4px rgb(4, 46, 4);
   transform: translateX(3px);
+}
+
+.hourly-chance-of-rain {
+  font-size: 14px;
 }
 
 .hourly-forecast-card p:first-child {

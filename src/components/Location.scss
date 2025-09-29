@@ -2,9 +2,8 @@
 
 .location-info {
   height: fit-content;
-  width: 40%;
-  padding: 20px 20px 20px 0;
-
+  width: 35%;
+  padding: 0 20px 10px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,16 +17,14 @@
 
 .country {
   font-size: 1.2rem;
-  padding-top: 10px;
 }
 
 .current-temperature {
-  margin-top: 5px;
   margin-bottom: -5px;
 }
 
 .current-temperature p {
-  font-size: 60px;
+  font-size: 48px;
   font-weight: bold;
   transform: translateX(10px);
 }
